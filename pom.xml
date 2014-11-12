@@ -9,7 +9,10 @@
 	<packaging>pom</packaging>
 	<name>Activiti App</name>
 
-
+	<!-- 聚合的模块 -->
+    <modules>
+		<module>persist</module>
+	</modules>
 
 	<!-- 通用的属性设置 -->
 	<properties>
