@@ -1,7 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<!-- 父模块的POM属性设置 -->
+	<!-- 父模块的POM设置 -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ranji.activiti</groupId>
 	<artifactId>activiti-app</artifactId>
@@ -15,9 +15,10 @@
 		<module>model</module>
 		<module>common</module>
 		<module>service</module>
-    </modules>
+    	<module>webapp</module>
+  </modules>
 
-	<!-- 通用的属性设置 -->
+	<!-- 通用的属性设置-->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<springFrame.version>4.1.2.RELEASE</springFrame.version>
