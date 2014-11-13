@@ -59,6 +59,6 @@ public class User implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "{"+userName+":"+enabled+":"+description+"}";
+		return "{"+id+":"+userName+":"+enabled+":"+description+"}";
 	}
 }

@@ -156,7 +156,6 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>activiti-app</finalName>
 	</build>
 	
 </project>

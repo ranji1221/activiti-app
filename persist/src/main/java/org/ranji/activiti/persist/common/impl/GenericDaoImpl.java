@@ -60,9 +60,10 @@ public abstract class GenericDaoImpl<T,ID extends Serializable> implements IGene
 	}
 	
 	//-- 查找某个实体
+	@SuppressWarnings("unchecked")
 	@Override
-	public T find(Serializable oid) {
-		T entity =  sqlSessionTemplate.selectOne(typeNameSpace+".find", oid);
+	public T find(ID oid) {
+		T entity =  (T)sqlSessionTemplate.selectOne(typeNameSpace+".find", oid);
 		return entity;
 	}
 	

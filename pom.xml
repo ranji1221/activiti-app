@@ -14,6 +14,7 @@
 		<module>persist</module>
 		<module>model</module>
 		<module>common</module>
+		<module>service</module>
     </modules>
 
 	<!-- 通用的属性设置 -->
