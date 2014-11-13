@@ -42,7 +42,7 @@
 	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
 	
 	<!-- 自定义Realm继承自AuthorizingRealm -->
-	<bean id="monitorRealm" class="com.company.project.security.MonitorRealm"/>
+	<bean id="monitorRealm" class="org.ranji.activiti.security.MonitorRealm"/>
 	<!-- securityManager -->
 	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
 		<property name="staticMethod" value="org.apache.shiro.SecurityUtils.setSecurityManager"/>
