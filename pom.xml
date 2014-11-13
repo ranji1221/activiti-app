@@ -9,14 +9,14 @@
 	<packaging>pom</packaging>
 	<name>Activiti App</name>
 
-	<!-- 聚合的模块 -->
+	<!-- 聚合模块 -->
     <modules>
 		<module>persist</module>
 		<module>model</module>
 		<module>common</module>
 		<module>service</module>
     	<module>webapp</module>
-  </modules>
+  	</modules>
 
 	<!-- 通用的属性设置-->
 	<properties>
