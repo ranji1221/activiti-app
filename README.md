@@ -33,4 +33,4 @@ activiti-app
 * 作业调度框架：Quartz
 
 #### 数据库
-* MySQL5，JAVAEE的应用可方便的切换Oracle/DB2/SQLServer等主流数据库
+* MySQL5.6，JAVAEE的应用可方便的切换Oracle/DB2/SQLServer等主流数据库

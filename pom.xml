@@ -12,12 +12,14 @@
 	<!-- 聚合的模块 -->
     <modules>
 		<module>persist</module>
-	</modules>
+		<module>model</module>
+		<module>common</module>
+    </modules>
 
 	<!-- 通用的属性设置 -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<springFrame.version>4.0.3.RELEASE</springFrame.version>
+		<springFrame.version>4.1.2.RELEASE</springFrame.version>
 		<mybatis.version>3.2.6</mybatis.version>
 		<mysqlDriver.version>5.1.30</mysqlDriver.version>
 		<dom4j.version>1.6.1</dom4j.version>
@@ -188,16 +190,17 @@
 				<artifactId>aspectjweaver</artifactId>
 				<version>1.7.3</version>
 			</dependency>
+			<!-- C3P0 -->
 			<dependency>
-				<groupId>c3p0</groupId>
+				<groupId>com.mchange</groupId>
 				<artifactId>c3p0</artifactId>
-				<version>0.9.1.2</version>
+				<version>0.9.2.1</version>
 			</dependency>
 			<!-- JUnit -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.7</version>
+				<version>4.11</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>

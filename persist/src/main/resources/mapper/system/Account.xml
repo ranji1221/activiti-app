@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.model.system">
+	<insert id="saveAccount" parameterType="Account">
+		insert into tbl_account(uname,pwd,enabled,description) values(#{uname},#{pwd},#{enabled},#{description})
+	</insert>
+	<update id="updateUser" parameterType="User">
+		update tbl_user
+		<set>
+			<if test=" uname != null  and  uname != '' ">uname=#{uname},</if>
+			<if test=" pwd != null and pwd != '' ">pwd=#{pwd},</if>
+			<if test=" enabled != null and enabled != '' ">enabled=#{enabled},</if>
+			<!-- 最后一个属性后可加也可以不加逗号 -->
+			<if test=" description != null and description != '' ">description=#{description},</if>
+		</set> 
+		where id=#{id}
+	</update>
+	<delete id="deleteUser" parameterType="Integer">
+		delete from tbl_user where id=#{id}
+	</delete>
+	<delete id="deleteAllUsers">
+		delete from tbl_user
+	</delete>
+	<select id="findUser" parameterType="Integer" resultType="User">
+		select * from tbl_user where id=#{id}
+	</select>
+	<select id="findAllUsers" resultType="User">
+		select * from tbl_user
+	</select>
+	<!-- 以上是基础Dao方法的实现，下面方法才更加具有实际的意义 -->
+	
+	<!--
+		作者RanJi之语录：
+			  致广大编程的同志们：
+			  以下所要实现的方法多数为查询数据的方法，从实际的工作中来看一般的查询总要涉及到分页查询的问题；
+			  笔者认为分页查找必定是两个方法同时出现，其目的是分别得到(分页后的内容)和(相关内容的总条目数)；
+			  Map通常包含3个参数：1. paramsValueObject（参数值对象）2. offset（偏移量） 3. limit（页大小）；
+			  当然根据需要传递多个参数，你可根据自己业务的需要实现相类似的方法；
+			  若有任何好的想法或者建议，请联系笔者：QQ: 95724368，邮箱：jiran1221@163.com 
+	-->
+	<select id="findPaginatedUsers" resultType="User" parameterType="Map">
+		select * from tbl_user
+		where 1=1
+		<if test="pvo != null">
+			<if test=" pvo.uname != null and pvo.uname != '' ">
+				and uname like concat(concat('%', #{pvo.uname, jdbcType=VARCHAR}),'%')
+			</if>
+			<if test=" pvo.enabled != null and pvo.enabled != '' ">
+				and enabled  = #{pvo.enabled, jdbcType=INTEGER}
+			</if>
+			<if test=" pvo.description != null and pvo.description != '' ">
+				and description like concat(concat('%', #{pvo.description, jdbcType=VARCHAR}),'%')
+			</if>
+		</if>  
+		limit #{offset}, #{limit}
+	</select>
+	
+	<select id="getNumberOfUserItems" resultType="Integer" parameterType="Map">
+		select count(*) from tbl_user
+		where 1=1
+		<if test="pvo != null">
+			<if test=" pvo.uname != null and pvo.uname != '' ">
+				and uname like concat(concat('%', #{pvo.uname, jdbcType=VARCHAR}),'%')
+			</if>
+			<if test=" pvo.enabled != null and pvo.enabled != '' ">
+				and enabled  = #{pvo.enabled, jdbcType=INTEGER}
+			</if>
+			<if test=" pvo.description != null and pvo.description != '' ">
+				and description like concat(concat('%', #{pvo.description, jdbcType=VARCHAR}),'%')
+			</if>
+		</if>  
+	</select>
+	
+	<select id="findByUserName" resultType="User" parameterType="String">
+		select * from tbl_user where uname=#{uname}
+	</select>
+	
+</mapper>

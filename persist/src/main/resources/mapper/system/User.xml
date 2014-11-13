@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ranji.activiti.model.system.User">
+	<insert id="save" parameterType="User"  keyProperty="id" useGeneratedKeys="true">
+		insert into tbl_user(userName,pwd,enabled,description) values(#{userName},#{pwd},#{enabled},#{description})
+	</insert>
+	<update id="update" parameterType="User">
+		update tbl_user
+		<set>
+			<if test=" userName != null  and  userName != '' ">userName=#{userName},</if>
+			<if test=" pwd != null and pwd != '' ">pwd=#{pwd},</if>
+			<if test=" enabled != null and enabled != '' ">enabled=#{enabled},</if>
+			<!-- 最后一个属性后可加也可以不加逗号 -->
+			<if test=" description != null and description != '' ">description=#{description},</if>
+		</set> 
+		where id=#{id}
+	</update>
+	<delete id="delete" parameterType="Integer">
+		delete from tbl_user where id=#{id}
+	</delete>
+	<delete id="deleteAll" parameterType="Map">
+		delete from tbl_user
+		where 1=1
+		<include refid="paramsSQL"/>
+	</delete>
+	<select id="find" parameterType="Integer" resultType="User">
+		select * from tbl_user where id=#{id}
+	</select>
+	<select id="findAll" resultType="User" parameterType="Map">
+		select * from tbl_user
+		where 1=1
+		<include refid="paramsSQL"/>
+	</select>
+	<!-- 以上是基础Dao方法的实现，下面方法才更加具有实际的意义 -->
+	<!--
+		作者RanJi之语录：
+			  致广大编程的同志们：
+			  以下所要实现的方法多数为查询数据的方法，从实际的工作中来看一般的查询总要涉及到分页查询的问题；
+			  笔者认为分页查找必定是两个方法同时出现，其目的是分别得到(分页后的内容)和(相关内容的总条目数)；
+			  Map通常包含3个参数：1. paramsValueObject（参数值对象）2. offset（偏移量） 3. limit（页大小）；
+			  当然根据需要传递多个参数，你可根据自己业务的需要实现相类似的方法；
+			  若有任何好的想法或者建议，请联系笔者：QQ: 95724368，邮箱：jiran1221@163.com 
+	-->
+	<select id="findPaginated" resultType="User" parameterType="Map">
+		select * from tbl_user
+		where 1=1
+		<include refid="paramsSQL"/>
+		limit #{offset}, #{limit}
+	</select>
+	<select id="getTotalNumOfItems" resultType="Integer" parameterType="Map">
+		select count(*) from tbl_user
+		where 1=1
+		<include refid="paramsSQL"/>
+	</select>
+	<!-- 通用的设置条件的查询SQL语句，方便上面的方法引入 -->
+	<sql id="paramsSQL">
+		<if test=" userName != null and userName != '' ">
+			and userName like concat(concat('%', #{userName, jdbcType=VARCHAR}),'%')
+		</if>
+		<if test=" enabled != null and enabled != '' ">
+			and enabled  = #{enabled, jdbcType=INTEGER}
+		</if>
+		<if test=" description != null and description != '' ">
+			and description like concat(concat('%', #{description, jdbcType=VARCHAR}),'%')
+		</if>
+	</sql>
+</mapper>
