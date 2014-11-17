@@ -21,7 +21,7 @@
 	<!-- 通用的属性设置-->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<springFrame.version>4.1.2.RELEASE</springFrame.version>
+		<springFrame.version>4.0.8.RELEASE</springFrame.version>
 		<mybatis.version>3.2.6</mybatis.version>
 		<mysqlDriver.version>5.1.30</mysqlDriver.version>
 		<dom4j.version>1.6.1</dom4j.version>
@@ -61,6 +61,7 @@
 				<artifactId>standard</artifactId>
 				<version>1.1.2</version>
 			</dependency>
+			
 			<!-- COMMONS Logging -->
 			<dependency>
 				<groupId>commons-logging</groupId>
@@ -71,6 +72,18 @@
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>1.2.17</version>
+			</dependency>
+			
+			<!-- SLF4J to Log4j -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.7</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.7.7</version>
 			</dependency>
 
 			<!-- Spring Framework -->

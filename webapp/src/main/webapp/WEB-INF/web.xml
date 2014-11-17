@@ -12,12 +12,13 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<!-- 暂时注释掉安全框架的配置文件 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:spring-persist.xml
 			classpath:spring-service.xml
-			classpath:spring-shiro.xml
+			<!-- classpath:spring-shiro.xml -->
 		</param-value>
 	</context-param>
 	
@@ -37,7 +38,7 @@
 	
 	
 	<!-- 设置Shiro安装框架的过滤器 -->
-	<filter>
+	<!-- <filter>
 		<filter-name>shiroFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 		<init-param>
@@ -49,7 +50,7 @@
 	<filter-mapping>
 		<filter-name>shiroFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> -->
 	
 	
 	<!-- 处理分页的过滤器 -->

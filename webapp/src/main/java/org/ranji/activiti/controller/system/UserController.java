@@ -5,12 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.apache.shiro.subject.Subject;
 import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
@@ -32,14 +27,15 @@ public class UserController {
 	@Autowired
 	private IUserService userService;
 
-	@RequiresPermissions("user:list")
+	//-- 暂时注释掉安全框架的内容
+	//@RequiresPermissions("user:list")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public ModelAndView list() {
 		ModelAndView mv = new ModelAndView();
-		Subject currentUser = SecurityUtils.getSubject();
-		System.out.println(currentUser.isAuthenticated());
-		System.out.println(currentUser.isPermitted("user:list"));
-		mv.setViewName("/user/list");
+//		Subject currentUser = SecurityUtils.getSubject();
+//System.out.println(currentUser.isAuthenticated());
+//System.out.println(currentUser.isPermitted("user:list"));
+		mv.setViewName("/backend/system/user/list");
 		return mv;
 	}
 
@@ -85,40 +81,33 @@ public class UserController {
 	@RequestMapping(value = "/getusers", method = RequestMethod.POST)
 	@ResponseBody
 	public String getUsers(HttpServletRequest request) {
-		// -- 转换Objects Data 到 Json Data
-		ObjectMapper om = new ObjectMapper();
-
-		// -- 1. 从request对象中获取params JSON对象
+		
+		// -- 1. 从request对象中获取params的字符串 (格式为JSON字符串的样式)
 		String paramsJSONStr = request.getParameter("params");
+		
+		// -- 2. 把JSON字符串，转化为Map对象的键值对的样式 (利用JSON处理工具)
+		ObjectMapper om = new ObjectMapper();
 		Map<String, Object> params = null;
 		try {
-			params = om.readValue(paramsJSONStr,new TypeReference<Map<String, Object>>() {});
-		} catch (JsonParseException e1) {
-			e1.printStackTrace();
-		} catch (JsonMappingException e1) {
-			e1.printStackTrace();
-		} catch (IOException e1) {
-			e1.printStackTrace();
+			if(paramsJSONStr != null)
+				params = om.readValue(paramsJSONStr,new TypeReference<Map<String, Object>>() {});
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		
 		// -- 3. 查询参数条件传入业务方法，产生正确的结果
 		PagerModel<User> pm = userService.findPaginated(params);
-
+		
 		// -- 4. 把结果数据转变为JSON串传输给页面
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("total", pm.getTotal());
 		map.put("rows", pm.getData());
 		String jsonData = "";
 		try {
-			jsonData = om.writerWithDefaultPrettyPrinter().writeValueAsString(
-					map);
-		} catch (JsonGenerationException e) {
+			jsonData = om.writerWithDefaultPrettyPrinter().writeValueAsString(map);
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (JsonMappingException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		} 
 		return jsonData;
 	}
 }

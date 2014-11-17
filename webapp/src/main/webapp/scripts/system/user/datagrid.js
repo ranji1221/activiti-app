@@ -16,12 +16,12 @@ $('#dg').datagrid({
 	    {field : 'ck',checkbox : true} 
 	]],
 	columns:[[
-	    {field:'uname',title:'User Name'},
+	    {field:'userName',title:'User Name'},
 	    {field:'pwd',title:'Password'},
 	    {field:'enabled',title:'Enabled'},
 	    {field:'description',title:'Description'}
 	]],
-	// queryparams:{},
+	queryParams:{},
 	loadMsg : 'Data Loading......'
 });
 

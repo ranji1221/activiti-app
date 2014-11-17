@@ -1,8 +1,10 @@
 (function($){
 if ($.fn.pagination){
+	$.fn.pagination.defaults.pageSize = 10;
+	$.fn.pagination.defaults.pageList = [5,10,15];
 	$.fn.pagination.defaults.beforePageText = '第';
-	$.fn.pagination.defaults.afterPageText = '共{pages}页';
-	$.fn.pagination.defaults.displayMsg = '显示{from}到{to},共{total}记录';
+	$.fn.pagination.defaults.afterPageText = '页		共{pages}页';
+	$.fn.pagination.defaults.displayMsg = '当前显示{from} - {to} 条记录		共{total} 条记录';
 }
 if ($.fn.datagrid){
 	$.fn.datagrid.defaults.loadMsg = '正在处理，请稍待。。。';

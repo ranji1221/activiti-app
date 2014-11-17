@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/common/easyui.custom.css">		
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery/locale/easyui-lang-zh_CN.js"></script>
 	</head>
 	<body>
 		<!-- list users start -->
@@ -16,7 +17,7 @@
 			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit User</a>
 			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="removeUser()">Remove User</a>
 			<!-- search start -->
-			<%@include  file="search.jsp"%>
+			<%@ include  file="search.jsp" %>
 			<!-- search end -->
 		</div>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/system/user/datagrid.js" charset="UTF-8"></script>

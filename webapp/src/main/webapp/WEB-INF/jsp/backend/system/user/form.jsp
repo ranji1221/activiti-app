@@ -5,7 +5,7 @@
 	<form id="fm" method="post" novalidate>
 		<div class="fitem">
 			<label>User Name:</label>
-			<input name="uname" class="easyui-validatebox" required="true">
+			<input name="userName" class="easyui-validatebox" required="true">
 		</div>
 		<div class="fitem">
 			<label>Password:</label>
