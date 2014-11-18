@@ -59,6 +59,13 @@ public abstract class GenericDaoImpl<T,ID extends Serializable> implements IGene
 		sqlSessionTemplate.delete(typeNameSpace+".deleteAll",params);
 	}
 	
+	
+	//-- 根据给定的ID的集合，删除用户
+	@Override
+	public void deleteByIDS(List<ID> ids) {
+		sqlSessionTemplate.delete(typeNameSpace+".deleteByIDS", ids);
+	}
+	
 	//-- 查找某个实体
 	@SuppressWarnings("unchecked")
 	@Override

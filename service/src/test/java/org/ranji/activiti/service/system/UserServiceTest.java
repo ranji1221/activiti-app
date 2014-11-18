@@ -1,9 +1,9 @@
 package org.ranji.activiti.service.system;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ranji.activiti.model.pager.PagerModel;
@@ -25,21 +25,31 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations={"classpath:spring-persist.xml","classpath:spring-service.xml"})
 public class UserServiceTest {
 	@Autowired
-	private IUserService userSerivce;
+	private IUserService userService;
 	
 	@Test
 	public void testAddUser(){
 		User u = new User("zhangsan", "456", -1, "测试用户");
-		userSerivce.save(u);
+		userService.save(u);
 		System.out.println(u.getId());
+		
+		
 	}
 	
 	@Test
 	public void testDeleteUser(){
-		userSerivce.delete(9);
+		userService.delete(9);
+		
 		Map<String,Object> params = new HashMap<String,Object>();
 		params.put("userName", "zhangsan");
-		userSerivce.deleteAll(params);
+		userService.deleteAll(params);
+		
+		List<Integer> ids = new ArrayList<Integer>();
+		ids.add(16);
+		ids.add(17);
+		ids.add(18);
+		userService.deleteByIDS(ids);
+		
 	}
 	
 	@Test
@@ -47,10 +57,10 @@ public class UserServiceTest {
 		Map<String,Object> params = new HashMap<String,Object>();
 		params.put("userName", "zhangsan");
 		params.put("enabled", -1);
-		List<User> users = userSerivce.findAll(params);
+		List<User> users = userService.findAll(params);
 		System.out.println(users.size());
 		
-		users = userSerivce.findAll();
+		users = userService.findAll();
 		for (User user : users) {
 			System.out.println(user);
 		}
@@ -59,12 +69,12 @@ public class UserServiceTest {
 	@Test   //-- 分页查找
 	public void testFindPaginatedUser(){
 		//-- 1. 不带查询条件的分页查询
-		PagerModel<User> pm = userSerivce.findPaginated(null);
+		PagerModel<User> pm = userService.findPaginated(null);
 		System.out.println(pm.getTotal());
 		//--2. 设置分页的偏移量和大小,不带查询条件
 		SystemContext.setOffset(1);
 		SystemContext.setPageSize(3);
-		pm = userSerivce.findPaginated(null);
+		pm = userService.findPaginated(null);
 		System.out.println(pm.getTotal());
 		for (User user : pm.getData()) {
 			System.out.println(user);
@@ -75,7 +85,7 @@ public class UserServiceTest {
 		Map<String,Object> params = new HashMap<String,Object>();
 		params.put("userName", "zhangsan");
 		params.put("enabled", -1);
-		pm = userSerivce.findPaginated(params);
+		pm = userService.findPaginated(params);
 		System.out.println(pm.getTotal());
 		for (User user : pm.getData()) {
 			System.out.println(user);

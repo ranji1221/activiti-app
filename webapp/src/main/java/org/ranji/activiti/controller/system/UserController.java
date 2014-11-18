@@ -1,12 +1,12 @@
 package org.ranji.activiti.controller.system;
 
-import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.JsonMappingException;
+
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 import org.ranji.activiti.model.pager.PagerModel;
@@ -17,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -77,6 +78,20 @@ public class UserController {
 		}
 		return result;
 	}
+	
+	@RequestMapping(value = "/deleteByIDS", method = RequestMethod.POST)
+	@ResponseBody
+	public String deleteByIDS(@RequestParam("ids[]") Integer[] ids) {
+		String result = "";
+		try {
+			userService.deleteByIDS(Arrays.asList(ids));
+			result = "{ \"success\":true}";
+		} catch (Exception e) {
+			result = "{ \"msg\":\"sorry, add failure!\"}";
+		}
+		return result;
+	}
+	
 
 	@RequestMapping(value = "/getusers", method = RequestMethod.POST)
 	@ResponseBody

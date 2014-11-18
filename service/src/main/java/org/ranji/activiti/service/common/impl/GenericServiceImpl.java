@@ -37,6 +37,11 @@ public abstract class GenericServiceImpl<T, ID extends Serializable> implements 
 	public void deleteAll() {
 		dao.deleteAll();
 	}
+	
+	@Override
+	public void deleteByIDS(List<ID> ids){
+		dao.deleteByIDS(ids);
+	}
 
 	@Override
 	public T find(ID oid) {

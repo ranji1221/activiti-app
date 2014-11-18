@@ -23,6 +23,14 @@
 		where 1=1
 		<include refid="paramsSQL"/>
 	</delete>
+	<delete id="deleteByIDS" parameterType="List">
+		delete from tbl_user
+		where id in
+		<foreach collection="list" item="id" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+	
 	<select id="find" parameterType="Integer" resultType="User">
 		select * from tbl_user where id=#{id}
 	</select>

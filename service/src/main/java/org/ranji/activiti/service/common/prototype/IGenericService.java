@@ -27,6 +27,11 @@ public interface IGenericService<T,ID extends Serializable>{
 	public void deleteAll(Map<String,Object> params);
 	public void deleteAll();
 	/**
+	 * 根据给定的用户的ID的集合，删除用户
+	 * @param ids ID的集合
+	 */
+	public void deleteByIDS(List<ID> ids);
+	/**
 	 *  根据对象ID查询数据
 	 * @param oid   ID (主键值)
 	 * @return 对象

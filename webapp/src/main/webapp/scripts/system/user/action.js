@@ -26,25 +26,33 @@ function saveUser() {
 	});
 }
 function editUser() {
-	var row = $('#dg').datagrid('getSelected');
-	if (row) {
+	var rows = $('#dg').datagrid('getSelections');
+	if (rows.length == 1) {
 		$('#dlg').dialog('open').dialog('setTitle', 'Edit User');
-		$('#fm').form('load', row);
+		$('#fm').form('load', rows[0]);
 		$('#updateIDHiddenInput').remove();
 		$('#fm').append(
 				'<input id="updateIDHiddenInput" type="hidden" name="id" value="'
-						+ row.id + '">');
+						+ rows[0].id + '">');
 		url = 'update';
+	}else if(!rows || rows.length == 0) {
+		$.messager.alert('提示','请选择要编辑的数据!','info');
+	}else {
+		$.messager.alert('提示','请只选择一行要编辑的数据!','info');
 	}
 }
 function removeUser() {
-	var row = $('#dg').datagrid('getSelected');
-	if (row) {
+	var rows = $('#dg').datagrid('getSelections');
+	if (rows && rows.length > 0) {
 		$.messager.confirm('Confirm',
-				'Are you sure you want to remove this user?', function(r) {
+				'Are you sure you want to remove users?', function(r) {
 					if (r) {
+						var idsArr = new Array();
+						$.each(rows,function(i,row){
+							idsArr.push(row.id);
+						});
 						$.post(
-								'delete/'+ row.id, function(result) {
+								'deleteByIDS', {ids:idsArr} ,function(result) {
 									if (result.success) {
 										$('#dg').datagrid('reload');
 										$('#dg').datagrid('clearSelections');
@@ -57,12 +65,14 @@ function removeUser() {
 								}, 'json');
 					}
 				});
+	}else{
+		$.messager.alert('提示','请选择要删除的数据!','info');
 	}
 }
 
 function search(value,name){
 	var json = '{"' + name + '":"'+value+'"}';
-	$('#dg').datagrid({
+	var dg = $('#dg').datagrid({
 		queryParams:{
 			'params' : json
 		}

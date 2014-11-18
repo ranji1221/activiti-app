@@ -1,8 +1,10 @@
 package org.ranji.activiti.persist.system;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,10 +41,16 @@ public class UserDaoTest {
 	
 	@Test
 	public void testDeleteUser(){
-		userDao.delete(9);
+		/*userDao.delete(9);
 		Map<String,Object> params = new HashMap<String,Object>();
 		params.put("userName", "zhangsan");
-		userDao.deleteAll(params);
+		userDao.deleteAll(params);*/
+		
+		List<Integer> ids = new ArrayList<Integer>();
+		ids.add(11);
+		ids.add(12);
+		ids.add(15);
+		userDao.deleteByIDS(ids);
 	}
 	
 	@Test

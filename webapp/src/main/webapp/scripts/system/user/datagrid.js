@@ -1,5 +1,5 @@
 //-- set datagrid
-$('#dg').datagrid({
+var dg = $('#dg').datagrid({
 	title : 'User List',
 	iconCls : 'icon-edit', // 图标,
 	nowrap : false,
@@ -9,7 +9,7 @@ $('#dg').datagrid({
 	idField : 'id',
 	rownumbers : true,
 	fitColumns : true,
-	singleSelect : true,
+	//singleSelect : true,
 	pagination : true, // 分页控件
 	url : 'getusers',
 	frozenColumns : [[
