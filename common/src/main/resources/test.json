@@ -1,0 +1,4115 @@
+[{
+			"name" : "information_schema",
+			"tables" : []
+		}, {
+			"name" : "mysql",
+			"tables" : []
+		}, {
+			"name" : "performance_schema",
+			"tables" : []
+		}, {
+			"name" : "test",
+			"tables" : []
+		}, {
+			"name" : "ywpms",
+			"tables" : [{
+						"name" : "act_ge_bytearray",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "DEPLOYMENT_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "BYTES_",
+									"type" : "LONGBLOB",
+									"size" : 2147483647
+								}, {
+									"name" : "GENERATED_",
+									"type" : "TINYINT",
+									"size" : 3
+								}]
+					}, {
+						"name" : "act_ge_property",
+						"columns" : [{
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "VALUE_",
+									"type" : "VARCHAR",
+									"size" : 300
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "act_hi_actinst",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_DEF_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "EXECUTION_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "ACT_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "CALL_PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "ACT_NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "ACT_TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "ASSIGNEE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "START_TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "END_TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "DURATION_",
+									"type" : "BIGINT",
+									"size" : 19
+								}]
+					}, {
+						"name" : "act_hi_attachment",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "USER_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "DESCRIPTION_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "URL_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "CONTENT_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}]
+					}, {
+						"name" : "act_hi_comment",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "USER_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "ACTION_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "MESSAGE_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "FULL_MSG_",
+									"type" : "LONGBLOB",
+									"size" : 2147483647
+								}]
+					}, {
+						"name" : "act_hi_detail",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "EXECUTION_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "ACT_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "VAR_TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "BYTEARRAY_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "DOUBLE_",
+									"type" : "DOUBLE",
+									"size" : 22
+								}, {
+									"name" : "LONG_",
+									"type" : "BIGINT",
+									"size" : 19
+								}, {
+									"name" : "TEXT_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "TEXT2_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}]
+					}, {
+						"name" : "act_hi_identitylink",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "GROUP_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "USER_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}]
+					}, {
+						"name" : "act_hi_procinst",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "BUSINESS_KEY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PROC_DEF_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "START_TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "END_TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "DURATION_",
+									"type" : "BIGINT",
+									"size" : 19
+								}, {
+									"name" : "START_USER_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "START_ACT_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "END_ACT_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "SUPER_PROCESS_INSTANCE_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "DELETE_REASON_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}]
+					}, {
+						"name" : "act_hi_taskinst",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_DEF_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "TASK_DEF_KEY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "EXECUTION_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PARENT_TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "DESCRIPTION_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "OWNER_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "ASSIGNEE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "START_TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "CLAIM_TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "END_TIME_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "DURATION_",
+									"type" : "BIGINT",
+									"size" : 19
+								}, {
+									"name" : "DELETE_REASON_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "PRIORITY_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "DUE_DATE_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "FORM_KEY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "act_hi_varinst",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "EXECUTION_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "VAR_TYPE_",
+									"type" : "VARCHAR",
+									"size" : 100
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "BYTEARRAY_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "DOUBLE_",
+									"type" : "DOUBLE",
+									"size" : 22
+								}, {
+									"name" : "LONG_",
+									"type" : "BIGINT",
+									"size" : 19
+								}, {
+									"name" : "TEXT_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "TEXT2_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}]
+					}, {
+						"name" : "act_id_group",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "act_id_info",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "USER_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "KEY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "VALUE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PASSWORD_",
+									"type" : "LONGBLOB",
+									"size" : 2147483647
+								}, {
+									"name" : "PARENT_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "act_id_membership",
+						"columns" : [{
+									"name" : "USER_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "GROUP_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}]
+					}, {
+						"name" : "act_id_user",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "FIRST_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "LAST_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "EMAIL_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PWD_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PICTURE_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}]
+					}, {
+						"name" : "act_re_deployment",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "CATEGORY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "DEPLOY_TIME_",
+									"type" : "TIMESTAMP",
+									"size" : 19
+								}]
+					}, {
+						"name" : "act_re_model",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "KEY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "CATEGORY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "CREATE_TIME_",
+									"type" : "TIMESTAMP",
+									"size" : 19
+								}, {
+									"name" : "LAST_UPDATE_TIME_",
+									"type" : "TIMESTAMP",
+									"size" : 19
+								}, {
+									"name" : "VERSION_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "META_INFO_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "DEPLOYMENT_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "EDITOR_SOURCE_VALUE_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "EDITOR_SOURCE_EXTRA_VALUE_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}]
+					}, {
+						"name" : "act_re_procdef",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "CATEGORY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "KEY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "VERSION_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "DEPLOYMENT_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "RESOURCE_NAME_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "DGRM_RESOURCE_NAME_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "DESCRIPTION_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "HAS_START_FORM_KEY_",
+									"type" : "TINYINT",
+									"size" : 3
+								}, {
+									"name" : "SUSPENSION_STATE_",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "act_ru_event_subscr",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "EVENT_TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "EVENT_NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "EXECUTION_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "ACTIVITY_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "CONFIGURATION_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "CREATED_",
+									"type" : "TIMESTAMP",
+									"size" : 19
+								}]
+					}, {
+						"name" : "act_ru_execution",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "BUSINESS_KEY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PARENT_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_DEF_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "SUPER_EXEC_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "ACT_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "IS_ACTIVE_",
+									"type" : "TINYINT",
+									"size" : 3
+								}, {
+									"name" : "IS_CONCURRENT_",
+									"type" : "TINYINT",
+									"size" : 3
+								}, {
+									"name" : "IS_SCOPE_",
+									"type" : "TINYINT",
+									"size" : 3
+								}, {
+									"name" : "IS_EVENT_SCOPE_",
+									"type" : "TINYINT",
+									"size" : 3
+								}, {
+									"name" : "SUSPENSION_STATE_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "CACHED_ENT_STATE_",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "act_ru_identitylink",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "GROUP_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "USER_ID_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_DEF_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}]
+					}, {
+						"name" : "act_ru_job",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "LOCK_EXP_TIME_",
+									"type" : "TIMESTAMP",
+									"size" : 19
+								}, {
+									"name" : "LOCK_OWNER_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "EXCLUSIVE_",
+									"type" : "BIT",
+									"size" : null
+								}, {
+									"name" : "EXECUTION_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROCESS_INSTANCE_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_DEF_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "RETRIES_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "EXCEPTION_STACK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "EXCEPTION_MSG_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "DUEDATE_",
+									"type" : "TIMESTAMP",
+									"size" : 19
+								}, {
+									"name" : "REPEAT_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "HANDLER_TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "HANDLER_CFG_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}]
+					}, {
+						"name" : "act_ru_task",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "EXECUTION_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_DEF_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "PARENT_TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "DESCRIPTION_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "TASK_DEF_KEY_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "OWNER_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "ASSIGNEE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "DELEGATION_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PRIORITY_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "CREATE_TIME_",
+									"type" : "TIMESTAMP",
+									"size" : 19
+								}, {
+									"name" : "DUE_DATE_",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "SUSPENSION_STATE_",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "act_ru_variable",
+						"columns" : [{
+									"name" : "ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "REV_",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "TYPE_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "NAME_",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "EXECUTION_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "PROC_INST_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "TASK_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "BYTEARRAY_ID_",
+									"type" : "VARCHAR",
+									"size" : 64
+								}, {
+									"name" : "DOUBLE_",
+									"type" : "DOUBLE",
+									"size" : 22
+								}, {
+									"name" : "LONG_",
+									"type" : "BIGINT",
+									"size" : 19
+								}, {
+									"name" : "TEXT_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}, {
+									"name" : "TEXT2_",
+									"type" : "VARCHAR",
+									"size" : 4000
+								}]
+					}, {
+						"name" : "tbl_account",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "loginName",
+									"type" : "VARCHAR",
+									"size" : 100
+								}, {
+									"name" : "loginPwd",
+									"type" : "VARCHAR",
+									"size" : 128
+								}, {
+									"name" : "enabled",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "createDate",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "loginRange",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "workbenchBg",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "lastNoticeViewTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}]
+					}, {
+						"name" : "tbl_account_role",
+						"columns" : [{
+									"name" : "actId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "roleId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_bookclazz",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_bookshelf",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "bookName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "storeName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "bookPath",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "coverPagePath",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "bookSize",
+									"type" : "DOUBLE",
+									"size" : 22
+								}, {
+									"name" : "uploadTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "bookOwner",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "clazzId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_bpm_assign",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "type",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "expr",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "processId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "taskId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "version",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_bpm_form",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "title",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "sourceHtml",
+									"type" : "TEXT",
+									"size" : 65535
+								}, {
+									"name" : "genHtml",
+									"type" : "TEXT",
+									"size" : 65535
+								}, {
+									"name" : "genJson",
+									"type" : "TEXT",
+									"size" : 65535
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "processId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "taskId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "version",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "used",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_bpm_function",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "functionNumber",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "functionDescribe",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "processId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "taskId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "functionVersion",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "processKey",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "parentId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_bpm_index",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "indexNumber",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "indexStandard",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "indexScore",
+									"type" : "DOUBLE",
+									"size" : 22
+								}, {
+									"name" : "processId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "taskId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "indexVersion",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "processKey",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "parentId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_bpm_measure",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "measureNumber",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "measureStandard",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "indexScore",
+									"type" : "DOUBLE",
+									"size" : 22
+								}, {
+									"name" : "measureScore",
+									"type" : "DOUBLE",
+									"size" : 22
+								}, {
+									"name" : "processId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "taskId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "processKey",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "indexVersion",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "toUser",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "fromUser",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "taskName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "markTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}]
+					}, {
+						"name" : "tbl_bpm_provision",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "provisionNumber",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "provisionDescribe",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "processId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "taskId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "provisionVersion",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "processKey",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_bpm_statistic",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "colStr",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "processId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "taskId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "startTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "endTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}]
+					}, {
+						"name" : "tbl_bpm_trigger",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "category",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "processCate",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "triggerCate",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "processId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "triggerId",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "triggerKey",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "intervalTime",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "loopCount",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "loopInterval",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "tableName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "fieldName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "tableDBName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "fieldDBName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "dataType",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "logicSymbol",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "targetValue",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_checkday_1",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_10",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_11",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_12",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_13",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_14",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_15",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_16",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_17",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_18",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_19",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_2",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_20",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_21",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_22",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_23",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_24",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_25",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_26",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_27",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_28",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_29",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_3",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_30",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_31",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_4",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_5",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_6",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_7",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_8",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkday_9",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkDay",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkin",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "day",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "officeTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "checkType",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_1",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_10",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_11",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_12",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_2",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_3",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_4",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_5",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_6",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_7",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_8",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkmonth_9",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "checkMonth",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 255
+								}]
+					}, {
+						"name" : "tbl_checkrule",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "checkinTime",
+									"type" : "TIME",
+									"size" : 8
+								}, {
+									"name" : "checkoutTime",
+									"type" : "TIME",
+									"size" : 8
+								}]
+					}, {
+						"name" : "tbl_checktemp",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "year",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "month",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "day",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "checkinTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "checkoutTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}]
+					}, {
+						"name" : "tbl_checkyear",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isLate",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "lateTime",
+									"type" : "VARCHAR",
+									"size" : 11
+								}, {
+									"name" : "isOverwork",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "overTime",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "checkYear",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_employee",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "gender",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "job",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "description",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "education",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "dateOfBirth",
+									"type" : "DATE",
+									"size" : 10
+								}, {
+									"name" : "marriage",
+									"type" : "VARCHAR",
+									"size" : 10
+								}, {
+									"name" : "nation",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "height",
+									"type" : "VARCHAR",
+									"size" : 10
+								}, {
+									"name" : "weight",
+									"type" : "VARCHAR",
+									"size" : 10
+								}, {
+									"name" : "hometown",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "tel",
+									"type" : "VARCHAR",
+									"size" : 25
+								}, {
+									"name" : "idNumber",
+									"type" : "VARCHAR",
+									"size" : 30
+								}, {
+									"name" : "email",
+									"type" : "VARCHAR",
+									"size" : 40
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "isDel",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isOnJob",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "entryDate",
+									"type" : "DATE",
+									"size" : 10
+								}, {
+									"name" : "confirmDate",
+									"type" : "DATE",
+									"size" : 10
+								}, {
+									"name" : "departDate",
+									"type" : "DATE",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_noticeboard",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "title",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "summary",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "content",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "publishTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_organization",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 50
+								}, {
+									"name" : "orgSN",
+									"type" : "VARCHAR",
+									"size" : 25
+								}, {
+									"name" : "description",
+									"type" : "VARCHAR",
+									"size" : 50
+								}, {
+									"name" : "parentId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "isDel",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "workPlace",
+									"type" : "VARCHAR",
+									"size" : 50
+								}, {
+									"name" : "tel",
+									"type" : "VARCHAR",
+									"size" : 20
+								}, {
+									"name" : "manager",
+									"type" : "VARCHAR",
+									"size" : 25
+								}, {
+									"name" : "isTalentPool",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_performance",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "jsonData",
+									"type" : "TEXT",
+									"size" : 65535
+								}, {
+									"name" : "createTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "performanceName",
+									"type" : "VARCHAR",
+									"size" : 40
+								}]
+					}, {
+						"name" : "tbl_permission",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "token",
+									"type" : "VARCHAR",
+									"size" : 100
+								}, {
+									"name" : "url",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "description",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "parentId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_product",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "delFlag",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "description",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "attrJson",
+									"type" : "TEXT",
+									"size" : 65535
+								}, {
+									"name" : "parentId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_regulation",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "fileName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "storeName",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "filePath",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "coverPagePath",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "fileSize",
+									"type" : "DOUBLE",
+									"size" : 22
+								}, {
+									"name" : "uploadTime",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_role",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 100
+								}, {
+									"name" : "description",
+									"type" : "VARCHAR",
+									"size" : 255
+								}, {
+									"name" : "planNum",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "parentId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "relId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_role_permission",
+						"columns" : [{
+									"name" : "roleId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "permissionId",
+									"type" : "INT",
+									"size" : 10
+								}]
+					}, {
+						"name" : "tbl_schedule",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "employeeId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "name",
+									"type" : "VARCHAR",
+									"size" : 15
+								}, {
+									"name" : "orgId",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "orgName",
+									"type" : "VARCHAR",
+									"size" : 15
+								}, {
+									"name" : "title",
+									"type" : "VARCHAR",
+									"size" : 15
+								}, {
+									"name" : "start",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "end",
+									"type" : "DATETIME",
+									"size" : 19
+								}, {
+									"name" : "allDay",
+									"type" : "VARCHAR",
+									"size" : 15
+								}]
+					}, {
+						"name" : "tbl_user",
+						"columns" : [{
+									"name" : "id",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "uname",
+									"type" : "VARCHAR",
+									"size" : 100
+								}, {
+									"name" : "pwd",
+									"type" : "VARCHAR",
+									"size" : 128
+								}, {
+									"name" : "enabled",
+									"type" : "INT",
+									"size" : 10
+								}, {
+									"name" : "description",
+									"type" : "TEXT",
+									"size" : 65535
+								}]
+					}]
+		}]

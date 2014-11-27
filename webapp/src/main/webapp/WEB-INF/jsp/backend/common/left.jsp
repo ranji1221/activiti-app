@@ -21,8 +21,8 @@
 		My Network Places
 	</div>
 	<br/>
-	<div class="easyui-panel" title="Details" collapsible="true" style="width:200px;height:auto;padding:10px;">
-		My Documents<br/>
+	<div class="easyui-panel" title="DataBase Manager" collapsible="true" style="width:200px;height:auto;padding:10px;">
+		<a href="javascript:void(0)" onclick="addTab('DataBases','${pageContext.request.contextPath}/database/admin')">DataBase</a><br/>
 		File folder<br/>
 		Date modified: Nov.30rd 2013
 	</div>

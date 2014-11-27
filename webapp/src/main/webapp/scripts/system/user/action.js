@@ -1,11 +1,11 @@
 var url;
-function addUser() {
+function addItem() {
 	$('#dlg').dialog('open').dialog('setTitle', 'New User');
 	$('#updateIDHiddenInput').remove();
 	$('#fm').form('clear');
 	url = 'add';
 }
-function saveUser() {
+function saveItem() {
 	$('#fm').form('submit', {
 		url : url,
 		onSubmit : function() {
@@ -25,7 +25,7 @@ function saveUser() {
 		}
 	});
 }
-function editUser() {
+function editItem() {
 	var rows = $('#dg').datagrid('getSelections');
 	if (rows.length == 1) {
 		$('#dlg').dialog('open').dialog('setTitle', 'Edit User');
@@ -41,7 +41,7 @@ function editUser() {
 		$.messager.alert('提示','请只选择一行要编辑的数据!','info');
 	}
 }
-function removeUser() {
+function removeItems() {
 	var rows = $('#dg').datagrid('getSelections');
 	if (rows && rows.length > 0) {
 		$.messager.confirm('Confirm',
@@ -86,4 +86,19 @@ function search(value,name){
 		displayMsg : '当前显示 {from} - {to} 条记录 		共 {total} 条记录'
 	});
 }
+
+function reFresh(){
+	
+	$('#searchBox').searchbox('setValue','');
+	
+	$('#dg').datagrid({queryParams:{}});
+	$('#dg').datagrid('getPager').pagination({
+		pageSize : 10, // 每页显示的记录条数，默认为10
+		pageList : [ 5, 10, 15 ], // 可以设置每页记录条数的列表
+		beforePageText : '第', // 页数文本框前显示的汉字
+		afterPageText : '页	    共 {pages} 页',
+		displayMsg : '当前显示 {from} - {to} 条记录 		共 {total} 条记录'
+	});
+}
+
 
