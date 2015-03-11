@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ranji.activiti.model.system.Auth">
+
+	<insert id="assignRole" parameterType="Map">
+		insert into tbl_sys_userrole(userId,roleId) values(#{userId},#{roleId})
+	</insert>
+	
+	<delete id="cancelRole" parameterType="Map">
+		delete from tbl_sys_userrole
+		where userId=#{userId} and roleId=#{roleId}
+	</delete>
+		
+	<insert id="assignRoles" parameterType="Map">
+		insert into tbl_sys_userrole(userId,roleId) values
+		<foreach collection="roleIds" item="roleId" separator=",">
+			(#{userId},#{roleId})
+		</foreach>
+	</insert>
+		
+	
+	<delete id="cancelAllRoles" parameterType="Integer">
+		delete from tbl_sys_userrole
+		where userId=#{userId}
+	</delete>
+	
+	<select id="findRoles" parameterType="Integer" resultType="Role">
+		select r.id,r.name,r.description from 
+		tbl_sys_userrole ur,
+		tbl_sys_role r
+		where ur.userId = #{userId} and
+		ur.roleId = r.id
+	</select>
+	
+</mapper>

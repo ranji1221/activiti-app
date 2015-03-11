@@ -3,8 +3,11 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="org.ranji.activiti.model.system.User"  alias="User"/>
+		<typeAlias type="org.ranji.activiti.model.system.Role"  alias="Role"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/system/User.xml"/>
+		<mapper resource="mapper/system/Role.xml"/>
+		<mapper resource="mapper/system/Auth.xml"/>
 	</mappers>
 </configuration>

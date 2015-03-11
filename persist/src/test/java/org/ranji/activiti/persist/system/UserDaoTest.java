@@ -34,7 +34,7 @@ public class UserDaoTest {
 	
 	@Test
 	public void testAddUser(){
-		User u = new User("zhangsan", "456", -1, "测试用户");
+		User u = new User("lisi", "456", -1, "测试用户");
 		userDao.save(u);
 		System.out.println(u.getId());
 	}

@@ -22,6 +22,18 @@ import org.springframework.web.servlet.ModelAndView;
 public class AdminController {
 	
 	/**
+	 * 测试的后台管理主页面
+	 * @return mv
+	 */
+	@RequestMapping(value="/index",method=RequestMethod.GET)
+	public ModelAndView toBackendIndexPage(){
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("/backend/index");	//-- 设置后台管理主页面(main.jsp)的所在位置
+		return mv;
+	}
+	
+	
+	/**
 	 * 跳转到后台管理主页面
 	 * @return mv
 	 */
